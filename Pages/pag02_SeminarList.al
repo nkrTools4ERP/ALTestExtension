@@ -1,40 +1,25 @@
-page 50101 "CSD Seminar Card"
+page 50102 "CSD Seminar List"
 {
     PageType = Card;
     ApplicationArea = All;
-    UsageCategory = Administration;
+    UsageCategory = Lists;
     SourceTable = "CSD Seminar";
-    Caption = 'Seminar Card';
-
+    Caption = 'Seminar List';
+    Editable = false;
+    CardPageId = 50101;
 
     layout
     {
         area(Content)
         {
-            group(General)
+            repeater(Group)
             {
-                field("No."; "No.")
-                {
-                    AssistEdit = true;
-                    trigger OnAssistEdit();
-                    begin
-                        if AssistEdit then
-                            CurrPage.Update;
-                    end;
-                }
+                field("No."; "No.") { }
                 field("Name"; "Name") { }
-                field("Search Name"; "Search Name") { }
                 field("Seminar Duration"; "Seminar Duration") { }
+                field("Seminar Price"; "Seminar Price") { }
                 field("Minimum Participants"; "Minimum Participants") { }
                 field("Maximum Participants"; "Maximum Participants") { }
-                field("Blocked"; "Blocked") { }
-                field("Last Date Modified"; "Last Date Modified") { }
-            }
-            group(Invoicing)
-            {
-                field("Gen. Prod. Posting Group"; "Gen. Prod. Posting Group") { }
-                field("VAT Prod. Posting Group"; "VAT Prod. Posting Group") { }
-                field("Seminar Price"; "Seminar Price") { }
             }
         }
         area(FactBoxes)
@@ -53,7 +38,7 @@ page 50101 "CSD Seminar Card"
                 action("Co&mments")
                 {
                     //RunObject = page "CSD Seminar Comment Sheet";
-                    //RunPageLink = "Table Name"=const(Seminar),"No."=field("No.");
+                    //RunPageLink = "Table Name" = const (Seminar), "No." = field ("No.");
 
                     Image = Comment;
                     Promoted = true;
