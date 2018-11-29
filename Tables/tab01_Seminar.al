@@ -40,6 +40,11 @@ table 50101 "CSD Seminar"
         field(50; "Maximum Participants"; Integer)
         {
             Caption = 'Maximum Participants';
+            trigger OnValidate();
+            begin
+                IF "Maximum Participants" < "Minimum Participants" then
+                    Error('Maximum participants cannot be lower than minimum participants.');
+            end;
         }
         field(60; "Search Name"; Code[50])
         {
