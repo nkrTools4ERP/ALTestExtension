@@ -1,4 +1,4 @@
-page 50107 "CSD Seminar Comment List"
+page 50104 "CSD Seminar Comment List"
 {
     Caption = 'Seminar Comment List';
     PageType = List;

@@ -1,4 +1,4 @@
-table 50104 "CSD Seminar Comment Line"
+table 50102 "CSD Seminar Comment Line"
 {
     Caption = 'Seminar Comment Line';
     LookupPageId = "CSD Seminar Comment List";

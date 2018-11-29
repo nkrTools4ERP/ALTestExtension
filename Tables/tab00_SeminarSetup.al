@@ -1,6 +1,7 @@
 table 50100 "CSD Seminar Setup"
 {
     DataClassification = ToBeClassified;
+    Caption = 'Seminar Setup';
 
     fields
     {

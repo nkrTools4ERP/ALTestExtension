@@ -3,6 +3,7 @@ table 50101 "CSD Seminar"
     Caption = 'Seminar';
     LookupPageId = "CSD Seminar List";
     DrillDownPageId = "CSD Seminar List";
+
     fields
     {
         field(10; "No."; Code[20])
