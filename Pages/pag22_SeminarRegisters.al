@@ -3,6 +3,7 @@ page 50122 "CSD Seminar Registers"
     //CSD 1.0 - 30/11/2018 16:25
     // Chapter 7 - Lab 2.11
 
+    Caption = 'Seminar Registers';
     PageType = Card;
     ApplicationArea = All;
     UsageCategory = Administration;
