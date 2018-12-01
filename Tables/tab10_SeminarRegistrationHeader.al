@@ -11,6 +11,7 @@ table 50110 "CSD Seminar Reg. Header"
         field(1; "No."; Code[20])
         {
             Caption = 'No.';
+
             trigger OnValidate();
             begin
                 if "No." <> xRec."No." then begin
@@ -353,6 +354,11 @@ table 50110 "CSD Seminar Reg. Header"
         "Document Date" := WORKDATE;
         SeminarSetup.GET;
         NoSeriesMgt.SetDefaultSeries("Posting No. Series", SeminarSetup."Posted Seminar Reg. Nos.");
+
+        if GetFilter("Seminar No.") <> '' then
+            if GetRangeMin("Seminar No.") = GetRangeMax("Seminar No.")
+            then
+                Validate("Seminar No.", GetRangeMin("Seminar No."));
     end;
 
     procedure AssistEdit(OldSeminarRegHeader: Record "CSD Seminar Reg. Header"): Boolean;
