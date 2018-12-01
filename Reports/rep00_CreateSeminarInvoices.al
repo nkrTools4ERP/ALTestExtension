@@ -1,10 +1,10 @@
-report 50100 "Create Seminar Invoices"
+report 50100 "CSD Create Seminar Invoices"
 {
     // CSD1.00 - 2018-01-01 - D. E. Veloper
     //   Chapter 9 - Lab 2
     //     - Created new report
 
-    Caption = 'Create Seminar Invoices';
+    Caption = 'CSD Create Seminar Invoices';
     UsageCategory = ReportsAndAnalysis;
     ProcessingOnly = true;
 

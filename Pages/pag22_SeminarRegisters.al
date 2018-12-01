@@ -4,7 +4,7 @@ page 50122 "CSD Seminar Registers"
     // Chapter 7 - Lab 2.11
 
     Caption = 'Seminar Registers';
-    PageType = Card;
+    PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "CSD Seminar Register";
