@@ -88,7 +88,7 @@ codeunit 50132 "CSD Seminar Jnl.-Post Line"
             SeminarLdgrEntry."Source No." := "Source No.";
             SeminarLdgrEntry."Source Code" := "Source Code";
             SeminarLdgrEntry."Reason Code" := "Reason Code";
-            SeminarLdgrEntry."No. Series" := "Posting No. Series";
+            SeminarLdgrEntry."Posting No. Series" := "Posting No. Series";
             SeminarLdgrEntry."Entry No." := NextEntryNo;
             NextEntryNo += 1;
             SeminarLdgrEntry.Insert();

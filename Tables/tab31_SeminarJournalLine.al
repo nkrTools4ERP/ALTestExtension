@@ -1,7 +1,7 @@
 table 50131 "CSD Seminar Journal Line"
 {
     // CSD1.00 - 2018-01-01 - D. E. Veloper
-    //   Chapter 7 - Lab 1
+    //   Chapter 7 - Lab 1 - 2
     //     - Created new table
 
     Caption = 'Seminar Journal Line';
@@ -159,7 +159,7 @@ table 50131 "CSD Seminar Journal Line"
 
     procedure EmptyLine(): Boolean;
     begin
-        exit(("Seminar No." = '') AND (Quantity = 0));
+        exit(("Seminar No." = '') and (Quantity = 0));
     end;
 }
 
