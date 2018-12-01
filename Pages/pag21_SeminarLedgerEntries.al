@@ -4,10 +4,9 @@ page 50121 "CSD Seminar Ledger Entries"
     // Chapter 7 - Lab 2.9
 
     Caption = 'Seminar Ledger Entries';
-    PageType = Card;
+    PageType = List;
     SourceTable = "CSD Seminar Ledger Entry";
     Editable = false;
-    UsageCategory = Lists;
 
     layout
     {
@@ -17,7 +16,7 @@ page 50121 "CSD Seminar Ledger Entries"
             {
                 field("Posting Date"; "Posting Date") { }
                 field("Document No."; "Document No.") { }
-                field("Document Date"; "Document Date") { }
+                field("Document Date"; "Document Date") { Visible = false; }
                 field("Entry Type"; "Entry Type") { }
                 field("Seminar No."; "Seminar No.") { }
                 field(Description; Description) { }
@@ -54,18 +53,21 @@ page 50121 "CSD Seminar Ledger Entries"
     {
         area(Processing)
         {
-            action(ActionName)
+            action("&Navigate")
             {
-                ApplicationArea = All;
+                Caption = '&Navigate';
+                Image = Navigate;
+                Promoted = true;
+                PromotedCategory = Process;
 
-                trigger OnAction()
+                trigger OnAction();
+                var
+                    Navigate: page Navigate;
                 begin
-
+                    Navigate.SetDoc("Posting Date", "Document No.");
+                    Navigate.RUN;
                 end;
             }
         }
     }
-
-    var
-        myInt: Integer;
 }
