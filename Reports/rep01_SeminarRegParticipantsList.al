@@ -2,7 +2,7 @@ report 50101 "CSD Seminar Reg. Parti. List"
 {
     Caption = 'Seminar Reg.- Participant List';
     DefaultLayout = RDLC;
-    UsageCategory = Administration;
+    UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     RDLCLayout = './Layouts/SeminarRegParticipantList.rdl';
 
